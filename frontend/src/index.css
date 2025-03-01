@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+
+
+@theme{
+    --color-primary : #51AEFB;
+}
+
+.active hr{
+    display:block ;
+}
