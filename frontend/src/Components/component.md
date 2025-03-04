@@ -28,7 +28,7 @@ and ideally this is where all the doctors shall appear once we add them from the
 # Banner 
 
 This component contains and illustrates a call to action to create an account 
-and access the clien't context signUp page 
+and access the client's context signUp page 
 
 # Footer 
 

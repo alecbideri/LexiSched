@@ -1,9 +1,10 @@
-import React from 'react'
-import {lawyers} from "../assets/assets.js";
+import React, {useContext} from 'react'
 import {useNavigate} from "react-router-dom";
+import {AppContext} from "../context/AppContext.jsx";
 
 const TopLawyers = () => {
     const navigate = useNavigate();
+    const {lawyers} = useContext(AppContext);
     return (
         <div className='flex flex-col items-center gap-4 my-16 text-gray-800 md:mx-10'>
         {/*    ---Section titles and names*/}
