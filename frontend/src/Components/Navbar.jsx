@@ -2,6 +2,7 @@ import React from 'react'
 import {assets} from "../assets/assets.js";
 import {NavLink, useNavigate} from "react-router-dom";
 import { ChevronDown } from 'lucide-react';
+import {Menu , X} from 'lucide-react'
 
 const Navbar = () => {
 
@@ -45,8 +46,31 @@ const Navbar = () => {
                             </div>
                         </div>
                         : <button onClick={()=>navigate('/login')} className='bg-primary px-4 py-2 rounded-full text-white text-sm sm:text-sm cursor-pointer font-light hidden md:block'>Create account</button>
-
                 }
+                <Menu onClick={()=>setShowMenu(true)} className='md:hidden cursor-pointer'/>
+
+                {/*    --- Mobile Menu -----*/}
+
+                <div className={` ${showMenu ? 'fixed w-full' : 'h-0 w-0'} md:hidden right-0 top-0 bottom-0 z-20 overflow-hidden bg-white transition-all`}>
+                    <div className='flex items-center justify-between px-5 py-6'>
+                        <img onClick={()=>navigate('/')} className='w-36 cursor-pointer' src={assets.Logo} alt="Logo of prescripto"/>
+                        <X className='cursor-pointer' onClick={()=>setShowMenu(false)} />
+                    </div>
+                    <ul className='flex flex-col items-center gap-2 mt-5 px-5 text-lg font-medium'>
+                        <NavLink className='hover:bg-primary hover:text-white px-3 py-2 rounded' onClick={()=>setShowMenu(false)} to='/'>HOME</NavLink>
+                        <NavLink className='hover:bg-primary hover:text-white px-3 py-2 rounded' onClick={()=>setShowMenu(false)} to='/doctors'>ALL DOCTORS</NavLink>
+                        <NavLink className='hover:bg-primary hover:text-white px-3 py-2 rounded' onClick={()=>setShowMenu(false)} to='/about'>ABOUT US</NavLink>
+                        <NavLink className='hover:bg-primary hover:text-white px-3 py-2 rounded' onClick={()=>setShowMenu(false)} to='/contact'>CONTACT</NavLink>
+
+                        <button
+                            onClick={()=>{navigate('/login') ; setShowMenu(false)}}
+                            className='bg-primary text-white rounded-full cursor-pointer px-6 py-3 font-light mt-4 w-full md:w-auto md:block'
+                        >
+                            Create account
+                        </button>
+                    </ul>
+
+                </div>
             </div>
         </div>
     )

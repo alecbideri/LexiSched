@@ -1,12 +1,17 @@
-# React + Vite
+# Front-end
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This application contains multiple components, and pages which blend in
+to make a perfect UI that fullfills all the requirements of creating an appointment
+with a doctor , the pages are mentioned by the few
 
-Currently, two official plugins are available:
+- `Home page`
+- `About us page`
+- `Contact page`
+- `Doctors page`
+- `Appointments page`
+- `My appointments page`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+All this pages fullfills different functionalities from sections that provide
+information , booking details (time available , switching between related doctors)
+etc ..
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

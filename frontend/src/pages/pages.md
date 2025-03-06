@@ -67,3 +67,12 @@ to :
 
 N.B : Every information displayed or being used at the front-end is dummy data
 from the created object
+
+## My appointment page
+
+This page has list of all appointments made by a user , and it is where
+all the buttons to make an payment actions are found and can be accessed
+to either :
+
+- `Cancel payment`
+- `or make the payment` 

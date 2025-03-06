@@ -12,7 +12,7 @@ import aviation from "./aviations.png";
 import Trainings from "./Trainings.png";
 import construction from "./constructions.png";
 import Logo from "./LEXISCHED.png";
-import profile from "./profile_pic.jpg"
+import profile from "./profile_pic.png"
 import group_profile from "./group_profile.png"
 import header from "./Header_img.png"
 import banner from "./banners.png"

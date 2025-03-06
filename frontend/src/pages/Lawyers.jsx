@@ -4,8 +4,9 @@ import {AppContext} from "../context/AppContext.jsx";
 
 const Lawyers = () => {
 
-    const {speciality} = useParams()
-    const [filterLaw , setFilterLaw] = React.useState([])
+    const {speciality} = useParams();
+    const [filterLaw , setFilterLaw] = React.useState([]);
+    const [showFilter, setShowFilter] = React.useState(true);
     const navigate = useNavigate();
     const {lawyers} = useContext(AppContext);
 
@@ -25,7 +26,8 @@ const Lawyers = () => {
         <div>
             <p className='text-gray-600'>Browse through the lawyers speciality</p>
             <div className='flex flex-col sm:flex-row items-start gap-7 mt-3'>
-                <div className='flex flex-col gap-4 text-sm text-gray-600 mt-4'>
+                <button className={`py-1 px-3 border rounded text-sm transition-all sm:hidden ${showFilter ? 'bg-primary text-white' : ''}`} onClick={()=>setShowFilter(prev => !prev)}>Filter</button>
+                <div className={` flex-col gap-4 text-sm text-gray-600 ${showFilter ? 'flex' : 'hidden sm:flex'} `}>
                     <p onClick={()=> speciality === 'Trainings' ? navigate('/lawyers') : navigate('/lawyers/Trainings')} className={`w-[94vw] sm:w-auto pl-3 pr-16 py-1.5 border border-gray-300 rounded transition-all cursor-pointer ${speciality === 'Trainings' ? "bg-blue-100 text-black" : ""}`}>Trainings</p>
                     <p onClick={()=> speciality === 'Aviation' ? navigate('/lawyers') : navigate('/lawyers/Aviation')} className={`w-[94vw] sm:w-auto pl-3 pr-16 py-1.5 border border-gray-300 rounded transition-all cursor-pointer ${speciality === 'Aviation' ? "bg-blue-100 text-black" : ""}`}>Aviation</p>
                     <p onClick={()=> speciality === 'Dispute Resolution' ? navigate('/lawyers') : navigate('/lawyers/Dispute Resolution')} className={`w-[94vw] sm:w-auto pl-3 pr-16 py-1.5 border border-gray-300 rounded transition-all cursor-pointer ${speciality === 'Dispute Resolution' ? "bg-blue-100 text-black" : ""}`}>Dispute Resolution</p>

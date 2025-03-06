@@ -37,3 +37,8 @@ The footer , directly links you to some essential `communication` links and esse
 ## Related lawyers
 
 This component , checks and verifies the `speciality` of the rest of the lawyer's and removes the one in selection to be selected again using the `doc id's` .
+
+### Mobile menu
+
+Added a mobile menu that it is available on `mobile` view, and it is repsonsive
+contains all necessary links and a creating account button .

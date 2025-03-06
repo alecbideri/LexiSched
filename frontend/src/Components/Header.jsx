@@ -14,7 +14,7 @@ const Header = () => {
                     <p>Simply browse through our extensive list of trusted lawyers,
                         schedule your appointment hassle-free.</p>
                 </div>
-                <a className='flex items-center gap-2 bg-white px-5 py-4 rounded-full font-semibold cursor-pointer text-sm md:m-0 hover:scale-105 transition-all duration-300' href="#speciality">Book Appointment <ArrowRight/></a>
+                <a className='flex items-center gap-2 bg-white px-5 py-4 rounded-full font-medium text-gray-500 cursor-pointer text-sm md:m-0 hover:scale-105 transition-all duration-300' href="#speciality">Book Appointment <ArrowRight/></a>
             </div>
 
         {/*    ----Left section*/}

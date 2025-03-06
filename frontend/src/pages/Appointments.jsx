@@ -1,5 +1,5 @@
 import React, {useContext, useEffect, useState} from 'react'
-import {useParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import {AppContext} from "../context/AppContext.jsx";
 import {BadgeCheck, Info} from "lucide-react";
 import RelatedLawyers from "../Components/RelatedLawyers.jsx";
@@ -8,6 +8,7 @@ const Appointments = () => {
 
     const {lawId} = useParams()
     const {lawyers} = useContext(AppContext);
+    const navigate = useNavigate();
     const daysOfWeek = ['SUN', 'MON', 'TUE', 'WED', 'THUR', 'FRI', 'SAT']
 
 
@@ -123,7 +124,7 @@ const Appointments = () => {
                         </p>
                     ))}
                 </div>
-                <button className='bg-primary px-14 py-3 text-white rounded-full cursor-pointer mt-6 text-sm font-light'>Book an appointment</button>
+                <button onClick={()=>navigate('/my-appointment')} className='bg-primary px-14 py-3 text-white rounded-full cursor-pointer mt-6 text-sm font-light'>Book an appointment</button>
             </div>
             <RelatedLawyers lawId={lawId} speciality={lawInfo.speciality} />
         </div>
